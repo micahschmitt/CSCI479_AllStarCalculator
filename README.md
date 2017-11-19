@@ -6,4 +6,5 @@ We will use multiple algorithms to predict if NBA players should have made it to
 Current Algorithms:
   - Naive Bayes
   - K Means
-  - ...
+  - Logistic Regression
+  - Linear discriminant analysis
