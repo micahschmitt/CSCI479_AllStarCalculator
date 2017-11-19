@@ -8,3 +8,7 @@ Current Algorithms:
   - K Means
   - Logistic Regression
   - Linear discriminant analysis
+
+
+Data Source: Data.world NBA draft data
+https://data.world/rvino88/1976-to-2015-nba-draft-data/workspace/data-dictionary
