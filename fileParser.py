@@ -47,7 +47,7 @@ def hasPlayedAllStar(row):
 
 
 def parseFile():
-    with open(INPUT_FILE, 'r') as i, open('data_parsed.csv', 'w', newline='') as o:
+    with open(INPUT_FILE, 'r') as i, open('data_parsed.txt', 'w', newline='') as o:
         writer = csv.writer(o, delimiter =' ')
         for row in csv.reader(i):
             if int(row[8]) >= NUM_MIN_GAMES:
@@ -57,7 +57,7 @@ def parseFile():
 # Parses file according to the stats we wanted to look at according to Github
 # FG% / FT% / Min per game / rebounds per game / assists per game / hasPlayedAllStar (-1 or 1)
 def parseFileCleanedStats():
-    with open(INPUT_FILE, 'r') as i, open('data_parsed_cleaned_stats.csv', 'w', newline='') as o:
+    with open(INPUT_FILE, 'r') as i, open('data_parsed_cleaned_stats.txt', 'w', newline='') as o:
         writer = csv.writer(o, delimiter =' ')
         for row in csv.reader(i):
             if int(row[8]) >= NUM_MIN_GAMES:
@@ -66,4 +66,13 @@ def parseFileCleanedStats():
                      row[assits_per_game], str(hasPlayedAllStar(row))))
 
 
-parseFileCleanedStats()
+def parseFileClassFirst():
+    with open(INPUT_FILE, 'r') as i, open('class_first_parsed_cleaned_stats.txt', 'w', newline='') as o:
+        writer = csv.writer(o, delimiter =' ')
+        for row in csv.reader(i):
+            if int(row[8]) >= NUM_MIN_GAMES:
+                writer.writerow(
+                    (str(hasPlayedAllStar(row)), row[fg_percentage], row[ft_percentage], row[minutes_per_game], row[trb_per_game],
+                     row[assits_per_game]))
+
+parseFileClassFirst()
