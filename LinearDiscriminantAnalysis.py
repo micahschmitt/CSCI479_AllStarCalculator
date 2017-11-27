@@ -5,7 +5,7 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 FOLDS = 10
 
 # %% Read data from the file
-A = np.loadtxt('class_first_parsed_cleaned_stats.txt', delimiter=' ')
+A = np.loadtxt('parsed_cleaned_stats.txt', delimiter=' ')
 #Get the classes (-1, 1)
 y = A[:, 0]
 #Remove classes from data
