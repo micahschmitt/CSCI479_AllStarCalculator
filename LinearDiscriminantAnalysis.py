@@ -1,9 +1,6 @@
 import numpy as np
 from sklearn import cross_validation
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from sklearn.metrics import precision_score, accuracy_score, make_scorer
-
-FOLDS = 10
 
 # %% Read data from the file
 A = np.loadtxt('parsed_cleaned_stats.txt', delimiter=' ')

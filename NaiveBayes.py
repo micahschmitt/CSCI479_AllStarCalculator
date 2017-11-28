@@ -2,8 +2,6 @@ import numpy as np
 from sklearn import cross_validation
 from sklearn.naive_bayes import GaussianNB
 
-FOLDS = 10
-
 # %% Read data from the file
 A = np.loadtxt('parsed_cleaned_stats.txt', delimiter=' ')
 #Get the classes (-1, 1)
